@@ -1,0 +1,24 @@
+{
+  "name": "recuperacion-agustintoth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "npx nodemon app.js",
+    "seeds": "node bin/seeds.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.3.5",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "faker": "^6.6.6",
+    "nodemon": "^2.0.16"
+  }
+}

@@ -1,17 +1,18 @@
 require('dotenv').config();
-
 const createError = require('http-errors');
 const express = require('express');
 const logger = require('morgan');
 const mongoose = require('mongoose');
 
 require('./config/db.config');
+const auth = require('./middlewares/auth.middleware');
 
 const app = express();
 
 // Middlewares
 app.use(logger('dev'));
 app.use(express.json());
+app.use(auth.loadUser);
 
 // Routes
 const router = require('./config/routes.config');
